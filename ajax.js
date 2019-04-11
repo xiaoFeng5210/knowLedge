@@ -13,7 +13,7 @@ request.onreadystatechange=function(){
         }else if(request.status>=400){
             //说明请求失败。
         }
-        }
+        
     }
 }
 })
