@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vueDemo</title>
+</head>
+<body>
+    <div id="app">
+        {{date}}
+        <span v-text="date"></span>
+        <div v-html="xxx"></div>
+        <div v-bind:class="name"></div>
+        <button v-on:click="method"></button>
+    </div>
+
+
+
+    <script>
+    var app=new Vue({
+        el:"#app",
+        data:{
+            date:1,
+            xxx:"<p>nihao</p>",
+            name:'asdffdfas',
+
+            
+
+
+        },
+        methods:{
+            method:function(){
+                this.date+=1;
+            }
+        },
+       
+        filters:{
+            formdata:function(value){
+                return value
+
+            }
+        }
+
+        
+    })
+    </script>
+</body>
+</html>
